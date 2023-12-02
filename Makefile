@@ -5,9 +5,9 @@ clean:
 	rm *.out
 
 .PHONY: day1a
-day1a: day1a.cpp day1a.jl
+day1a: day1a.cpp day1a.jl day1a.d
 .PHONY: day1b
-day1b: day1b.cpp day1b.jl
+day1b: day1b.cpp day1b.jl day1b.d
 .PHONY: day1
 day1: day1a day1b
 
@@ -20,6 +20,11 @@ day1a.jl:
 	julia day1a/day1a.jl day1/input.txt
 day1b.jl:
 	julia day1b/day1b.jl day1/input.txt
+
+day1a.d:
+	rdmd day1a/day1a.d day1/input.txt
+day1b.d:
+	rdmd day1b/day1b.d day1/input.txt
 
 .PHONY: day2a
 day2a: day2a.cpp day2a.jl
