@@ -4,9 +4,6 @@
 #include <cstdlib>
 #include <fstream>
 #include <iostream>
-#include <iterator>
-#include <numeric>
-#include <sstream>
 #include <string>
 
 template <typename T>
