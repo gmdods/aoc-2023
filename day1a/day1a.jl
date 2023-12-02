@@ -8,7 +8,7 @@ end
 
 
 function main()
-        local file = (length(ARGS) > 0) ? ARGS[1] : "day1/example_a.txt"
+        local file = (length(ARGS) > 0) ? ARGS[1] : "day1/example_1a.txt"
         local sum = 0
         for line = readlines(file)
                 sum += calibrate_a(line)

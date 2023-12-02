@@ -15,7 +15,7 @@ function result_a(limit::RGB, line::String)
 end
 
 function main()
-        local file = (length(ARGS) > 0) ? ARGS[1] : "day1/example_1b.txt"
+        local file = (length(ARGS) > 0) ? ARGS[1] : "day2/example_2a.txt"
         local sum = 0
 
         limit = RGB(12, 13, 14)
