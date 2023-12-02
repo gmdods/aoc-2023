@@ -14,20 +14,24 @@ struct rgb_t {
 	friend std::istream & operator>>(std::istream & is, rgb_t & rgb) {
 		static std::array<std::string, 3> names = {"red", "green",
 							   "blue"};
-
+		constexpr auto alpha = [](char c) { return std::isalpha(c); };
 		std::string name;
 		std::array<uint8_t, 4> colours = {0};
 		for (size_t i = 0; i != 3; ++i) {
 			unsigned colour = 0;
 			is >> colour >> name;
-			char sep = name.back();
-			if (sep == ';' || sep == ',') name.pop_back();
+
+			auto sentinel =
+			    std::find_if_not(name.begin(), name.end(), alpha);
+			bool is_last =
+			    (sentinel == name.end()) || (*sentinel != ',');
+			name.erase(sentinel, name.end());
 
 			size_t c =
 			    std::find(names.cbegin(), names.cend(), name) -
 			    names.cbegin();
 			colours[c] = colour;
-			if (sep != ',') break;
+			if (is_last) break;
 		}
 
 		rgb = rgb_t{
