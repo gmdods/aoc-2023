@@ -1,5 +1,5 @@
-# Prerequisites
-*.d
+# Prerequisites (Removing for Dlang)
+# *.d
 
 # Compiled Object files
 *.slo
