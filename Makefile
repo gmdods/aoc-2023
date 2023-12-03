@@ -5,9 +5,9 @@ clean:
 	rm *.out
 
 .PHONY: day1a
-day1a: day1a.cpp day1a.jl day1a.d
+day1a: day1a.cpp day1a.jl day1a.d day1a.ml
 .PHONY: day1b
-day1b: day1b.cpp day1b.jl day1b.d
+day1b: day1b.cpp day1b.jl day1b.d day1b.ml
 .PHONY: day1
 day1: day1a day1b
 
@@ -25,6 +25,12 @@ day1a.d:
 	rdmd day1a/day1a.d day1/input.txt
 day1b.d:
 	rdmd day1b/day1b.d day1/input.txt
+
+day1a.ml:
+	ocaml day1a/day1a.ml day1/input.txt
+day1b.ml:
+	ocaml day1b/day1b.ml day1/input.txt
+
 
 .PHONY: day2a
 day2a: day2a.cpp day2a.jl
