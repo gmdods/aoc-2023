@@ -33,9 +33,9 @@ day1b.ml:
 
 
 .PHONY: day2a
-day2a: day2a.cpp day2a.jl
+day2a: day2a.cpp day2a.jl day2a.ml
 .PHONY: day2b
-day2b: day2b.cpp day2b.jl
+day2b: day2b.cpp day2b.jl day2b.ml
 .PHONY: day2
 day2: day2a day2b
 
@@ -48,6 +48,11 @@ day2a.jl:
 	julia day2a/day2a.jl day2/input.txt
 day2b.jl:
 	julia day2b/day2b.jl day2/input.txt
+
+day2a.ml:
+	ocaml day2a/day2a.ml day2/input.txt
+day2b.ml:
+	ocaml day2b/day2b.ml day2/input.txt
 
 
 .PHONY: day3a
