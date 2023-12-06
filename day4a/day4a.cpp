@@ -6,22 +6,20 @@
 #include <iterator>
 #include <sstream>
 #include <string>
+#include <string_view>
 
-#include "../day4/parse.cpp"
+#include "../aoc.hpp"
 
-unsigned point_a(std::string line) {
-	auto [id, left, right] = read_table(line);
-	std::stringstream prefix{left};
-	std::stringstream suffix{right};
+unsigned point_a(std::string_view line) {
+	auto [id, sequence] = aoc::read_key_id(line);
+	auto [left, right] = aoc::read_separator(sequence, '|');
 
-	std::vector<int> winning{};
-	std::copy(std::istream_iterator<unsigned>(prefix),
-		  std::istream_iterator<unsigned>(),
-		  std::back_inserter(winning));
+	std::vector<unsigned> winning{};
+	aoc::copy_line(left, winning);
+	aoc::string_copy mine{right};
 
-	auto wins = std::count_if(
-	    std::istream_iterator<unsigned>(suffix),
-	    std::istream_iterator<unsigned>(), [&winning](auto elt) {
+	auto wins =
+	    std::count_if(mine.begin(), mine.end(), [&winning](auto elt) {
 		    return std::find(winning.cbegin(), winning.cend(), elt) !=
 			   winning.cend();
 	    });

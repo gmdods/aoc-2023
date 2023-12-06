@@ -6,14 +6,14 @@
 #include <utility>
 #include <vector>
 
-#include "../day5/parse.cpp"
+#include "../aoc.hpp"
 
 void location_a(std::vector<std::string> lines, std::vector<unsigned> & seeds) {
 
 	std::vector<std::array<unsigned, 3>> maps{};
 	std::vector<unsigned> triples{0, 0, 0};
 	for (auto line : lines) {
-		copy_line(line, triples);
+		aoc::copy_line(line, triples);
 		maps.push_back(std::array{triples[0], triples[1], triples[2]});
 	}
 
@@ -40,8 +40,7 @@ int main(int argc, const char * argv[]) {
 	std::string line{};
 	if (!std::getline(file, line)) return 1;
 	std::vector<unsigned> seeds{};
-	line = line.substr(line.find(':') + 1, line.size());
-	copy_line(line, seeds);
+	aoc::copy_line(aoc::read_key_value(line).second, seeds);
 
 	if (!std::getline(file, line) || !line.empty()) return 1;
 

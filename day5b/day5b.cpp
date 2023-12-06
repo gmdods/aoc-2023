@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include "../day5/parse.cpp"
+#include "../aoc.hpp"
 
 struct unitrange {
 	unsigned index = 0, length = 0;
@@ -24,7 +24,7 @@ void location_b(std::vector<std::string> lines,
 	std::vector<std::array<unsigned, 3>> maps{};
 	std::vector<unsigned> triples{0, 0, 0};
 	for (auto line : lines) {
-		copy_line(line, triples);
+		aoc::copy_line(line, triples);
 		maps.push_back(std::array{triples[0], triples[1], triples[2]});
 	}
 
@@ -72,8 +72,7 @@ int main(int argc, const char * argv[]) {
 	if (!std::getline(file, line)) return 1;
 
 	std::vector<unsigned> seedling{};
-	line = line.substr(line.find(':') + 1, line.size());
-	copy_line(line, seedling);
+	aoc::copy_line(aoc::read_key_value(line).second, seedling);
 
 	std::vector<unitrange> seeds{};
 	size_t nseed = seedling.size();
