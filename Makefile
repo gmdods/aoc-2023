@@ -85,3 +85,21 @@ day4a.jl:
 day4b.jl:
 	julia day4b/day4b.jl day4/input.txt
 
+
+.PHONY: day5a
+day5a: day5a.cpp day5a.jl
+.PHONY: day5b
+day5b: day5b.cpp day5b.jl
+.PHONY: day5
+day5: day5a day5b
+
+day5a.cpp:
+	g++ day5a/day5a.cpp -o day5a.out && ./day5a.out day5/input.txt
+day5b.cpp:
+	g++ day5b/day5b.cpp -o day5b.out && ./day5b.out day5/input.txt
+
+day5a.jl:
+	julia day5a/day5a.jl day5/input.txt
+day5b.jl:
+	julia day5b/day5b.jl day5/input.txt
+
