@@ -1,10 +1,11 @@
 #! /usr/local/bin/julia
 
-include("../day5/parse.jl")
+include("../aoc.jl")
 
-function inrange(r::UnitRange{Int}, lim::Int)
+within(r::UnitRange{Int}, lim::Int) = (r.stop >= 0) & (r.start < lim)
+
+inrange(r::UnitRange{Int}, lim::Int) =
 	[r.start:-1, max(r.start, 0):min(r.stop, lim-1), lim:r.stop]
-end
 
 add(r::UnitRange{Int}, d::Int) = r .+ d
 
@@ -36,13 +37,13 @@ function recurse(start::Vector{UnitRange{Int}}, maps::Vector{Matrix{Int}})
 end
 
 function location_b(lines::Vector{String})
-	tables = partitioned(lines)
+	tables = partitioned(isempty, lines)
 	(seeds, maps) = Iterators.peel(tables)
-	seedling = spaced(split(only(seeds), ':')[2])
+	seedling = readstring(readvalues(only(seeds)))
 	reseed = reshape(seedling, (2, length(seedling) ÷ 2))
 	seeded = range.(reseed[1, :], reseed[1, :] .+ reseed[2, :] .- 1)
 
-	map = [reduce(hcat, spaced.(@view text[2:end])) for text = maps]
+	map = [reduce(hcat, readstring.(@view text[2:end])) for text = maps]
 	recurse(seeded, map)
 end
 

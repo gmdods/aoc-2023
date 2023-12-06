@@ -1,11 +1,13 @@
 #! /usr/local/bin/julia
 
-include("../day4/parse.jl")
+include("../aoc.jl")
 
 function part_b(lines::Vector{String})
-        table = readtable.(lines)
-	local cards = zeros(Int, length(table))
-	for (id, winning, mine) = table
+	local cards = zeros(Int, length(lines))
+	for line = lines
+		idstr = readkey(line)[findfirst(isdigit, line):end]
+		id = parse(Int, idstr)
+		winning, mine = readstring.(split(readvalues(line), '|'))
 		index = indexin(mine, winning)
 		wins = sum(.!isnothing.(index))
 		cards[id .+ (1:wins)] .+= (cards[id] += 1)

@@ -1,6 +1,11 @@
 #! /usr/local/bin/julia
 
-include("../day5/parse.jl")
+include("../aoc.jl")
+
+indexable(_::AbstractArray{T}, _::Nothing, default::T) where {T} = default
+indexable(A::AbstractArray{T}, i::Int, _::T) where {T} = A[i]
+
+within(r::Int, lim::Int) = (r >= 0) & (r < lim)
 
 function recurse(start::Vector{Int}, maps::Vector{Matrix{Int}})
         for map = maps
@@ -13,10 +18,10 @@ function recurse(start::Vector{Int}, maps::Vector{Matrix{Int}})
 end
 
 function location_a(lines::Vector{String})
-        tables = partitioned(lines)
+        tables = partitioned(isempty, lines)
         (seeds, maps) = Iterators.peel(tables)
-        seedling = spaced(split(only(seeds), ':')[2])
-        map = [reduce(hcat, spaced.(@view text[2:end])) for text = maps]
+	seedling = readstring(readvalues(only(seeds)))
+        map = [reduce(hcat, readstring.(@view text[2:end])) for text = maps]
         recurse(seedling, map)
 end
 

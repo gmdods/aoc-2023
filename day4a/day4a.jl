@@ -1,9 +1,9 @@
 #! /usr/local/bin/julia
 
-include("../day4/parse.jl")
+include("../aoc.jl")
 
 function part_a(line::String)
-        _, winning, mine = readtable(line)
+	winning, mine = readstring.(split(readvalues(line), '|'))
         index = indexin(mine, winning)
 	wins = sum(.!isnothing.(index))
 	(wins > 0) ? (2^(wins-1)) : 0
