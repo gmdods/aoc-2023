@@ -17,7 +17,7 @@ size_t possibilities_a(unsigned time, unsigned distance) {
 }
 
 int main(int argc, const char * argv[]) {
-	std::ifstream file{(argc >= 2) ? argv[1] : "day6/example_6a.txt"};
+	std::ifstream file{(argc >= 2) ? argv[1] : "day6/example.txt"};
 	if (!file) {
 		std::cerr << "No file\n";
 		return 1;

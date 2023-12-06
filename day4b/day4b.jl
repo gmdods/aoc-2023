@@ -16,7 +16,7 @@ function part_b(lines::Vector{String})
 end
 
 function main()
-        local file = (length(ARGS) > 0) ? ARGS[1] : "day4/example_4b.txt"
+        local file = (length(ARGS) > 0) ? ARGS[1] : "day4/example.txt"
 
         lines = readlines(file)
 	println("Sum : ", sum(part_b(lines)))

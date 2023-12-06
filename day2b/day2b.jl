@@ -15,7 +15,7 @@ function result_b(line::String)
 end
 
 function main()
-        local file = (length(ARGS) > 0) ? ARGS[1] : "day2/example_2b.txt"
+        local file = (length(ARGS) > 0) ? ARGS[1] : "day2/example.txt"
         local sum = 0
 
         for line = readlines(file)

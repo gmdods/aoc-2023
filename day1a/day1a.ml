@@ -20,7 +20,7 @@ let calibrate_a line =
 ;;
 let () =
         let filename = if Array.length Sys.argv > 1
-                then Array.get Sys.argv 1 else "day1/example_1a.txt" in
+                then Array.get Sys.argv 1 else "day1/example_a.txt" in
         let ch = open_in filename in
         let rec add_lines sum =
                 match In_channel.input_line ch with

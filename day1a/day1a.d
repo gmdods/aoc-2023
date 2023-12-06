@@ -23,7 +23,7 @@ int main(string[] args)
 	import std.stdio;
 	import std.algorithm;
 
-	auto path = (args.length > 1) ? args[1] : "day1/example_1a.txt";
+	auto path = (args.length > 1) ? args[1] : "day1/example_a.txt";
 	auto file = File(path, "r");
 	auto sum = file.byLine().map!calibrate_a().sum();
 

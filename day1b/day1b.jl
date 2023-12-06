@@ -35,7 +35,7 @@ function calibrate_b(line::String)
 end
 
 function main()
-        local file = (length(ARGS) > 0) ? ARGS[1] : "day1/example_1b.txt"
+        local file = (length(ARGS) > 0) ? ARGS[1] : "day1/example_a.txt"
         local sum = 0
         for line = readlines(file)
                 sum += calibrate_b(line)

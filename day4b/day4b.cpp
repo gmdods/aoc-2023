@@ -30,7 +30,7 @@ unsigned point_b(std::string & line, std::vector<unsigned> & cards) {
 }
 
 int main(int argc, const char * argv[]) {
-	std::ifstream file{(argc >= 2) ? argv[1] : "day4/example_4b.txt"};
+	std::ifstream file{(argc >= 2) ? argv[1] : "day4/example.txt"};
 	if (!file) {
 		std::cerr << "No file\n";
 		return 1;

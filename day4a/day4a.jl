@@ -10,7 +10,7 @@ function part_a(line::String)
 end
 
 function main()
-        local file = (length(ARGS) > 0) ? ARGS[1] : "day4/example_4a.txt"
+        local file = (length(ARGS) > 0) ? ARGS[1] : "day4/example.txt"
         local sum = 0
 
         for line = readlines(file)

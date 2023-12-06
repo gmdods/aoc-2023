@@ -48,7 +48,7 @@ function location_b(lines::Vector{String})
 end
 
 function main()
-        local file = (length(ARGS) > 0) ? ARGS[1] : "day5/example_5a.txt"
+        local file = (length(ARGS) > 0) ? ARGS[1] : "day5/example.txt"
 
         lines = readlines(file)
 	println("Min : ", location_b(lines))

@@ -26,7 +26,7 @@ unsigned result_a(rgb_t limit, std::string line) {
 }
 
 int main(int argc, const char * argv[]) {
-	std::ifstream file{(argc >= 2) ? argv[1] : "day2/example_2a.txt"};
+	std::ifstream file{(argc >= 2) ? argv[1] : "day2/example.txt"};
 	if (!file) {
 		std::cerr << "No file\n";
 		return 1;

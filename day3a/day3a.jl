@@ -13,7 +13,7 @@ function part_a(matrix::Matrix{Char})
 end
 
 function main()
-        file = (length(ARGS) > 0) ? ARGS[1] : "day3/example_3a.txt"
+        file = (length(ARGS) > 0) ? ARGS[1] : "day3/example.txt"
 
         text = filter(!isempty, readlines(file))
 	matrix = reduce(hcat, collect.(text))

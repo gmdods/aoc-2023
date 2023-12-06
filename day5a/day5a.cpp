@@ -31,7 +31,7 @@ void location_a(std::vector<std::string> lines, std::vector<unsigned> & seeds) {
 }
 
 int main(int argc, const char * argv[]) {
-	std::ifstream file{(argc >= 2) ? argv[1] : "day5/example_5a.txt"};
+	std::ifstream file{(argc >= 2) ? argv[1] : "day5/example.txt"};
 	if (!file) {
 		std::cerr << "No file\n";
 		return 1;
