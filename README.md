@@ -1,14 +1,6 @@
 # Advent of Code 2023
 My solutions for Advent of Code 2023
 
-- [x] Day 1
-- [x] Day 2
-- [x] Day 3
-- [x] Day 4
-- [x] Day 5
-- [x] Day 6
-- [x] Day 7
-
 Solved using:
 
 - C++
@@ -27,7 +19,7 @@ Solved using:
     - [x] Day 5
     - [x] Day 6
     - [x] Day 7
-- [ ] OCaml
+- OCaml
     - [x] Day 1
     - [x] Day 2
     - [ ] Day 3
@@ -35,7 +27,7 @@ Solved using:
     - [ ] Day 5
     - [ ] Day 6
     - [ ] Day 7
-- [ ] D
+- D
     - [x] Day 1
     - [ ] Day 2
     - [ ] Day 3
