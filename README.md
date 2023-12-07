@@ -7,10 +7,39 @@ My solutions for Advent of Code 2023
 - [x] Day 4
 - [x] Day 5
 - [x] Day 6
+- [x] Day 7
 
 Solved using:
 
-- [x] C++
-- [x] Julia
-- [ ] D
+- C++
+    - [x] Day 1
+    - [x] Day 2
+    - [x] Day 3
+    - [x] Day 4
+    - [x] Day 5
+    - [x] Day 6
+    - [x] Day 7
+- Julia
+    - [x] Day 1
+    - [x] Day 2
+    - [x] Day 3
+    - [x] Day 4
+    - [x] Day 5
+    - [x] Day 6
+    - [x] Day 7
 - [ ] OCaml
+    - [x] Day 1
+    - [x] Day 2
+    - [ ] Day 3
+    - [ ] Day 4
+    - [ ] Day 5
+    - [ ] Day 6
+    - [ ] Day 7
+- [ ] D
+    - [x] Day 1
+    - [ ] Day 2
+    - [ ] Day 3
+    - [ ] Day 4
+    - [ ] Day 5
+    - [ ] Day 6
+    - [ ] Day 7
