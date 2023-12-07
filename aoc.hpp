@@ -12,12 +12,13 @@
 namespace aoc {
 
 struct string_copy {
-	std::stringstream stream{};
+	std::istringstream stream{};
 	string_copy(std::string & line) : stream(line) {}
 	string_copy(std::string_view line) : stream(std::string(line)) {}
 
 	auto begin() { return std::istream_iterator<unsigned>(stream); }
 	auto end() { return std::istream_iterator<unsigned>(); }
+
 };
 
 void copy_line(std::string_view line, std::vector<unsigned> & out) {
