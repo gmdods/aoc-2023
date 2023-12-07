@@ -2,9 +2,9 @@
 #include <cstdint>
 #include <cstdlib>
 #include <fstream>
-#include <iomanip>
 #include <iostream>
 #include <map>
+#include <numeric>
 #include <string>
 #include <utility>
 #include <vector>
@@ -21,16 +21,15 @@ unsigned point_b(std::array<uint8_t, 5> card) {
 			++count[c];
 
 	auto it = std::max_element(
-	    count.begin(), count.end(),
+	    count.cbegin(), count.cend(),
 	    [](auto lhs, auto rhs) { return lhs.second < rhs.second; });
-	if (it == count.end()) return 2 * joker - 1;
-	(*it).second += joker;
-	unsigned max = 0, sum = 0;
-	for (auto [k, v] : count) {
-		if (v <= 1) continue;
-		if (v > max) max = v;
-		sum += v - 1;
-	}
+	if (it == count.cend()) return 2 * joker - 1;
+	unsigned max = (*it).second + joker;
+	unsigned sum =
+	    joker +
+	    std::transform_reduce(
+		count.cbegin(), count.cend(), 0, std::plus{},
+		[](auto kv) { return (kv.second > 1) ? kv.second - 1 : 0; });
 	return max + sum;
 }
 

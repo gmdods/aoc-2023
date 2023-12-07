@@ -11,9 +11,9 @@ function point_b(c::Vector{Int})
         joker = sum(c .== 1)
         equals = broadcast(u -> sum(c .== u), unique(c[c.!=1]))
         !isempty(equals) || return  2 * joker - 1
-        equals[argmax(equals)] += joker
-        equals = filter(>(1), equals)
-        maximum(equals; init=0) + sum(equals) - length(equals)
+	max = (equals[argmax(equals)] += joker)
+        filter!(>(1), equals)
+        max + sum(equals) - length(equals)
         # [5] -> 5 + 5 - 1	= 9;
         # [4] -> 4 + 4 - 1	= 7;
         # [3, 2] -> 3 + 5 - 2	= 6;
