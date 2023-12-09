@@ -12,6 +12,7 @@ Solved using:
     - [x] Day 6
     - [x] Day 7
     - [x] Day 8
+    - [x] Day 9
 - Julia
     - [x] Day 1
     - [x] Day 2
@@ -21,6 +22,7 @@ Solved using:
     - [x] Day 6
     - [x] Day 7
     - [x] Day 8
+    - [x] Day 9
 - OCaml
     - [x] Day 1
     - [x] Day 2
@@ -30,6 +32,7 @@ Solved using:
     - [ ] Day 6
     - [ ] Day 7
     - [ ] Day 8
+    - [ ] Day 9
 - D
     - [x] Day 1
     - [ ] Day 2
@@ -39,3 +42,4 @@ Solved using:
     - [ ] Day 6
     - [ ] Day 7
     - [ ] Day 8
+    - [ ] Day 9

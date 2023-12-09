@@ -21,7 +21,8 @@ struct string_copy {
 
 };
 
-void copy_line(std::string_view line, std::vector<unsigned> & out) {
+template<typename Integral>
+void copy_line(std::string_view line, std::vector<Integral> & out) {
 	aoc::string_copy stream{line};
 	out.clear();
 	std::copy(stream.begin(), stream.end(), std::back_inserter(out));
