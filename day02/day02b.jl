@@ -1,6 +1,6 @@
 #! /usr/local/bin/julia
 
-include("../day02/parse.jl")
+include("parse.jl")
 
 majorize(lhs::RGB, rhs::RGB) =
         RGB(max(lhs.red, rhs.red),

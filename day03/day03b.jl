@@ -1,6 +1,6 @@
 #! /usr/local/bin/julia
 
-include("../day03/parse.jl")
+include("parse.jl")
 
 function part_b(matrix::Matrix{Char})
         digits = isdigit.(matrix)

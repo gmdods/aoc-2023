@@ -6,7 +6,7 @@
 #include <sstream>
 #include <string>
 
-#include "../day02/parse.hpp"
+#include "parse.hpp"
 
 unsigned result_b(std::string line) {
 	unsigned id = 0;
