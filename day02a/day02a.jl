@@ -1,6 +1,6 @@
 #! /usr/local/bin/julia
 
-include("../day2/parse.jl")
+include("../day02/parse.jl")
 
 function bounded(lhs::RGB, rhs::RGB)
         (lhs.red <= rhs.red) &

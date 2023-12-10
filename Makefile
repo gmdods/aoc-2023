@@ -1,189 +1,189 @@
 .PHONY: all
-all: day1 day2 day3 day4 day5 day6
+all: day01 day02 day03 day04 day05 day06 day07 day08 day09 day10
 
 clean:
 	rm *.out
 
-.PHONY: day1a
-day1a: day1a.cpp day1a.jl day1a.d day1a.ml
-.PHONY: day1b
-day1b: day1b.cpp day1b.jl day1b.d day1b.ml
-.PHONY: day1
-day1: day1a day1b
+.PHONY: day01a
+day01a: day01a.cpp day01a.jl day01a.d day01a.ml
+.PHONY: day01b
+day01b: day01b.cpp day01b.jl day01b.d day01b.ml
+.PHONY: day01
+day01: day01a day01b
 
-day1a.cpp:
-	g++ day1a/day1a.cpp -o day1a.out && ./day1a.out day1/input.txt
-day1b.cpp:
-	g++ day1b/day1b.cpp -o day1b.out && ./day1b.out day1/input.txt
+day01a.cpp:
+	g++ day01a/day01a.cpp -o day01a.out && ./day01a.out day01/input.txt
+day01b.cpp:
+	g++ day01b/day01b.cpp -o day01b.out && ./day01b.out day01/input.txt
 
-day1a.jl:
-	julia day1a/day1a.jl day1/input.txt
-day1b.jl:
-	julia day1b/day1b.jl day1/input.txt
+day01a.jl:
+	julia day01a/day01a.jl day01/input.txt
+day01b.jl:
+	julia day01b/day01b.jl day01/input.txt
 
-day1a.d:
-	rdmd day1a/day1a.d day1/input.txt
-day1b.d:
-	rdmd day1b/day1b.d day1/input.txt
+day01a.d:
+	rdmd day01a/day01a.d day01/input.txt
+day01b.d:
+	rdmd day01b/day01b.d day01/input.txt
 
-day1a.ml:
-	ocaml day1a/day1a.ml day1/input.txt
-day1b.ml:
-	ocaml day1b/day1b.ml day1/input.txt
-
-
-.PHONY: day2a
-day2a: day2a.cpp day2a.jl day2a.ml
-.PHONY: day2b
-day2b: day2b.cpp day2b.jl day2b.ml
-.PHONY: day2
-day2: day2a day2b
-
-day2a.cpp:
-	g++ day2a/day2a.cpp -o day2a.out && ./day2a.out day2/input.txt
-day2b.cpp:
-	g++ day2b/day2b.cpp -o day2b.out && ./day2b.out day2/input.txt
-
-day2a.jl:
-	julia day2a/day2a.jl day2/input.txt
-day2b.jl:
-	julia day2b/day2b.jl day2/input.txt
-
-day2a.ml:
-	ocaml day2a/day2a.ml day2/input.txt
-day2b.ml:
-	ocaml day2b/day2b.ml day2/input.txt
+day01a.ml:
+	ocaml day01a/day01a.ml day01/input.txt
+day01b.ml:
+	ocaml day01b/day01b.ml day01/input.txt
 
 
-.PHONY: day3a
-day3a: day3a.cpp day3a.jl day3a.ml
-.PHONY: day3b
-day3b: day3b.cpp day3b.jl day3b.ml
-.PHONY: day3
-day3: day3a day3b
+.PHONY: day02a
+day02a: day02a.cpp day02a.jl day02a.ml
+.PHONY: day02b
+day02b: day02b.cpp day02b.jl day02b.ml
+.PHONY: day02
+day02: day02a day02b
 
-day3a.cpp:
-	g++ day3a/day3a.cpp -o day3a.out && ./day3a.out day3/input.txt
-day3b.cpp:
-	g++ day3b/day3b.cpp -o day3b.out && ./day3b.out day3/input.txt
+day02a.cpp:
+	g++ day02a/day02a.cpp -o day02a.out && ./day02a.out day02/input.txt
+day02b.cpp:
+	g++ day02b/day02b.cpp -o day02b.out && ./day02b.out day02/input.txt
 
-day3a.jl:
-	julia day3a/day3a.jl day3/input.txt
-day3b.jl:
-	julia day3b/day3b.jl day3/input.txt
+day02a.jl:
+	julia day02a/day02a.jl day02/input.txt
+day02b.jl:
+	julia day02b/day02b.jl day02/input.txt
 
-day3a.ml:
-	ocaml day3a/day3a.ml day3/input.txt
-day3b.ml:
-	ocaml day3b/day3b.ml day3/input.txt
-
-
-.PHONY: day4a
-day4a: day4a.cpp day4a.jl
-.PHONY: day4b
-day4b: day4b.cpp day4b.jl
-.PHONY: day4
-day4: day4a day4b
-
-day4a.cpp:
-	g++ day4a/day4a.cpp -o day4a.out && ./day4a.out day4/input.txt
-day4b.cpp:
-	g++ day4b/day4b.cpp -o day4b.out && ./day4b.out day4/input.txt
-
-day4a.jl:
-	julia day4a/day4a.jl day4/input.txt
-day4b.jl:
-	julia day4b/day4b.jl day4/input.txt
+day02a.ml:
+	ocaml day02a/day02a.ml day02/input.txt
+day02b.ml:
+	ocaml day02b/day02b.ml day02/input.txt
 
 
-.PHONY: day5a
-day5a: day5a.cpp day5a.jl
-.PHONY: day5b
-day5b: day5b.cpp day5b.jl
-.PHONY: day5
-day5: day5a day5b
+.PHONY: day03a
+day03a: day03a.cpp day03a.jl day03a.ml
+.PHONY: day03b
+day03b: day03b.cpp day03b.jl day03b.ml
+.PHONY: day03
+day03: day03a day03b
 
-day5a.cpp:
-	g++ day5a/day5a.cpp -o day5a.out && ./day5a.out day5/input.txt
-day5b.cpp:
-	g++ day5b/day5b.cpp -o day5b.out && ./day5b.out day5/input.txt
+day03a.cpp:
+	g++ day03a/day03a.cpp -o day03a.out && ./day03a.out day03/input.txt
+day03b.cpp:
+	g++ day03b/day03b.cpp -o day03b.out && ./day03b.out day03/input.txt
 
-day5a.jl:
-	julia day5a/day5a.jl day5/input.txt
-day5b.jl:
-	julia day5b/day5b.jl day5/input.txt
+day03a.jl:
+	julia day03a/day03a.jl day03/input.txt
+day03b.jl:
+	julia day03b/day03b.jl day03/input.txt
 
-
-.PHONY: day6a
-day6a: day6a.cpp day6a.jl
-.PHONY: day6b
-day6b: day6b.cpp day6b.jl
-.PHONY: day6
-day6: day6a day6b
-
-day6a.cpp:
-	g++ day6a/day6a.cpp -o day6a.out && ./day6a.out day6/input.txt
-day6b.cpp:
-	g++ day6b/day6b.cpp -o day6b.out && ./day6b.out day6/input.txt
-
-day6a.jl:
-	julia day6a/day6a.jl day6/input.txt
-day6b.jl:
-	julia day6b/day6b.jl day6/input.txt
+day03a.ml:
+	ocaml day03a/day03a.ml day03/input.txt
+day03b.ml:
+	ocaml day03b/day03b.ml day03/input.txt
 
 
-.PHONY: day7a
-day7a: day7a.cpp day7a.jl
-.PHONY: day7b
-day7b: day7b.cpp day7b.jl
-.PHONY: day7
-day7: day7a day7b
+.PHONY: day04a
+day04a: day04a.cpp day04a.jl
+.PHONY: day04b
+day04b: day04b.cpp day04b.jl
+.PHONY: day04
+day04: day04a day04b
 
-day7a.cpp:
-	g++ day7a/day7a.cpp -o day7a.out && ./day7a.out day7/input.txt
-day7b.cpp:
-	g++ day7b/day7b.cpp -o day7b.out && ./day7b.out day7/input.txt
+day04a.cpp:
+	g++ day04a/day04a.cpp -o day04a.out && ./day04a.out day04/input.txt
+day04b.cpp:
+	g++ day04b/day04b.cpp -o day04b.out && ./day04b.out day04/input.txt
 
-day7a.jl:
-	julia day7a/day7a.jl day7/input.txt
-day7b.jl:
-	julia day7b/day7b.jl day7/input.txt
-
-
-.PHONY: day8a
-day8a: day8a.cpp day8a.jl
-.PHONY: day8b
-day8b: day8b.cpp day8b.jl
-.PHONY: day8
-day8: day8a day8b
-
-day8a.cpp:
-	g++ day8a/day8a.cpp -o day8a.out && ./day8a.out day8/input.txt
-day8b.cpp:
-	g++ day8b/day8b.cpp -o day8b.out && ./day8b.out day8/input.txt
-
-day8a.jl:
-	julia day8a/day8a.jl day8/input.txt
-day8b.jl:
-	julia day8b/day8b.jl day8/input.txt
+day04a.jl:
+	julia day04a/day04a.jl day04/input.txt
+day04b.jl:
+	julia day04b/day04b.jl day04/input.txt
 
 
-.PHONY: day9a
-day9a: day9a.cpp day9a.jl
-.PHONY: day9b
-day9b: day9b.cpp day9b.jl
-.PHONY: day9
-day9: day9a day9b
+.PHONY: day05a
+day05a: day05a.cpp day05a.jl
+.PHONY: day05b
+day05b: day05b.cpp day05b.jl
+.PHONY: day05
+day05: day05a day05b
 
-day9a.cpp:
-	g++ day9a/day9a.cpp -o day9a.out && ./day9a.out day9/input.txt
-day9b.cpp:
-	g++ day9b/day9b.cpp -o day9b.out && ./day9b.out day9/input.txt
+day05a.cpp:
+	g++ day05a/day05a.cpp -o day05a.out && ./day05a.out day05/input.txt
+day05b.cpp:
+	g++ day05b/day05b.cpp -o day05b.out && ./day05b.out day05/input.txt
 
-day9a.jl:
-	julia day9a/day9a.jl day9/input.txt
-day9b.jl:
-	julia day9b/day9b.jl day9/input.txt
+day05a.jl:
+	julia day05a/day05a.jl day05/input.txt
+day05b.jl:
+	julia day05b/day05b.jl day05/input.txt
+
+
+.PHONY: day06a
+day06a: day06a.cpp day06a.jl
+.PHONY: day06b
+day06b: day06b.cpp day06b.jl
+.PHONY: day06
+day06: day06a day06b
+
+day06a.cpp:
+	g++ day06a/day06a.cpp -o day06a.out && ./day06a.out day06/input.txt
+day06b.cpp:
+	g++ day06b/day06b.cpp -o day06b.out && ./day06b.out day06/input.txt
+
+day06a.jl:
+	julia day06a/day06a.jl day06/input.txt
+day06b.jl:
+	julia day06b/day06b.jl day06/input.txt
+
+
+.PHONY: day07a
+day07a: day07a.cpp day07a.jl
+.PHONY: day07b
+day07b: day07b.cpp day07b.jl
+.PHONY: day07
+day07: day07a day07b
+
+day07a.cpp:
+	g++ day07a/day07a.cpp -o day07a.out && ./day07a.out day07/input.txt
+day07b.cpp:
+	g++ day07b/day07b.cpp -o day07b.out && ./day07b.out day07/input.txt
+
+day07a.jl:
+	julia day07a/day07a.jl day07/input.txt
+day07b.jl:
+	julia day07b/day07b.jl day07/input.txt
+
+
+.PHONY: day08a
+day08a: day08a.cpp day08a.jl
+.PHONY: day08b
+day08b: day08b.cpp day08b.jl
+.PHONY: day08
+day08: day08a day08b
+
+day08a.cpp:
+	g++ day08a/day08a.cpp -o day08a.out && ./day08a.out day08/input.txt
+day08b.cpp:
+	g++ day08b/day08b.cpp -o day08b.out && ./day08b.out day08/input.txt
+
+day08a.jl:
+	julia day08a/day08a.jl day08/input.txt
+day08b.jl:
+	julia day08b/day08b.jl day08/input.txt
+
+
+.PHONY: day09a
+day09a: day09a.cpp day09a.jl
+.PHONY: day09b
+day09b: day09b.cpp day09b.jl
+.PHONY: day09
+day09: day09a day09b
+
+day09a.cpp:
+	g++ day09a/day09a.cpp -o day09a.out && ./day09a.out day09/input.txt
+day09b.cpp:
+	g++ day09b/day09b.cpp -o day09b.out && ./day09b.out day09/input.txt
+
+day09a.jl:
+	julia day09a/day09a.jl day09/input.txt
+day09b.jl:
+	julia day09b/day09b.jl day09/input.txt
 
 
 .PHONY: day10a

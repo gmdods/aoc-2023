@@ -6,7 +6,7 @@
 #include <sstream>
 #include <string>
 
-#include "../day2/parse.hpp"
+#include "../day02/parse.hpp"
 
 unsigned result_a(rgb_t limit, std::string line) {
 	unsigned id = 0;
