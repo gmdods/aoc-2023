@@ -1,5 +1,5 @@
 .PHONY: all
-all: day01 day02 day03 day04 day05 day06 day07 day08 day09 day10
+all: day01 day02 day03 day04 day05 day06 day07 day08 day09 day10 day11 clean
 
 clean:
 	rm *.out
@@ -202,5 +202,18 @@ day10a.jl:
 	julia day10/day10a.jl day10/input.txt
 day10b.jl:
 	julia day10/day10b.jl day10/input.txt
+
+
+.PHONY: day11a
+day11a: day11a.jl
+.PHONY: day11b
+day11b: day11b.jl
+.PHONY: day11
+day11: day11a day11b
+
+day11a.jl:
+	julia day11/day11a.jl day11/input.txt
+day11b.jl:
+	julia day11/day11b.jl day11/input.txt
 
 
