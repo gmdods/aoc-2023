@@ -16,7 +16,7 @@ end
 
 function partitioned(by::Pred, lines::Vector{T}) where {Pred<:Function} where {T}
         f = findall(by.(lines))
-	r = range.([0; f .+ 1], [f .- 1; length(lines)])
+	r = range.([1; f .+ 1], [f .- 1; length(lines)])
 	getindex.(Ref(lines), r)
 end
 
