@@ -217,3 +217,16 @@ day11b.jl:
 	julia day11/day11b.jl day11/input.txt
 
 
+.PHONY: day12a
+day12a: day12a.jl
+.PHONY: day12b
+day12b: day12b.jl
+.PHONY: day12
+day12: day12a day12b
+
+day12a.jl:
+	julia day12/day12a.jl day12/input.txt
+day12b.jl:
+	julia day12/day12b.jl day12/input.txt
+
+
