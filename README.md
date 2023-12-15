@@ -18,6 +18,7 @@ Solved using:
     - [ ] Day 12
     - [ ] Day 13
     - [ ] Day 14
+    - [ ] Day 15
 - Julia
     - [x] Day 1
     - [x] Day 2
@@ -37,6 +38,7 @@ Solved using:
     - [ ] Day 14
         - [x] A
         - [ ] B
+    - [x] Day 15
 - OCaml
     - [x] Day 1
     - [x] Day 2
@@ -52,6 +54,7 @@ Solved using:
     - [ ] Day 12
     - [ ] Day 13
     - [ ] Day 14
+    - [ ] Day 15
 - D
     - [x] Day 1
     - [ ] Day 2
@@ -67,3 +70,4 @@ Solved using:
     - [ ] Day 12
     - [ ] Day 13
     - [ ] Day 14
+    - [ ] Day 15
